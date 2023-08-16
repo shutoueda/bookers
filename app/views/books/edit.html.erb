@@ -3,10 +3,10 @@
 </div>
 
 <h1>Editing Book</h1>
-<%= if @book.errors.any? %>
+<% if @book.errors.any? %>
   <%= @book.errors.count %> errors prohibited this book from being saved:
   <ul>
-    <% @book errors.book.full_messages.each do |message| %>
+    <% @book.errors.full_messages.each do |message| %>
     <li><%= message %></li>
     <% end %>
   </ul>
